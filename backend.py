@@ -1,4 +1,4 @@
-import requests
+import requests,json
 
 API_KEY= "fff3090fc15d04de67ef947609036a05"
 
@@ -10,6 +10,7 @@ def get_data(place, forecast_days=None):
     nr_values = 8 * forecast_days
     filtered_data = filtered_data[:nr_values]
     return filtered_data
+
 
 if __name__== "__main__":
     print(get_data(place="Lagos", forecast_days=3))
